@@ -1,0 +1,215 @@
+/* Registration Page Styles */
+.register-section {
+    padding: 100px 0;
+    min-height: calc(100vh - 80px);
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+}
+
+.register-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.register-header {
+    padding: 30px;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.register-header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.register-header p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.register-form-container {
+    padding: 30px;
+}
+
+.register-form .form-group {
+    margin-bottom: 20px;
+}
+
+.register-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--light-text);
+}
+
+.input-with-icon .toggle-password {
+    left: auto;
+    right: 15px;
+    cursor: pointer;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid #e1e1e1;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.register-form input[type="text"]:focus,
+.register-form input[type="email"]:focus,
+.register-form input[type="password"]:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+.error-message {
+    color: var(--accent-color);
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+.password-requirements {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+}
+
+.password-requirements p {
+    font-size: 14px;
+    color: var(--light-text);
+    margin-bottom: 5px;
+}
+
+.password-requirements ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.password-requirements li {
+    font-size: 12px;
+    color: var(--light-text);
+    margin-bottom: 3px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.password-requirements li::before {
+    content: '×';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+.password-requirements li.valid::before {
+    content: '✓';
+    color: #27ae60;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 3px;
+}
+
+.checkbox-group label {
+    font-size: 14px;
+    color: var(--light-text);
+}
+
+.checkbox-group a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.checkbox-group a:hover {
+    text-decoration: underline;
+}
+
+.form-actions {
+    margin-top: 30px;
+}
+
+.form-actions .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.register-footer {
+    padding: 20px 30px;
+    text-align: center;
+    border-top: 1px solid #e1e1e1;
+    background-color: #f8f9fa;
+}
+
+.register-footer p {
+    font-size: 14px;
+    color: var(--light-text);
+}
+
+.register-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.register-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .register-section {
+        padding: 80px 0;
+    }
+    
+    .register-container {
+        max-width: 100%;
+        margin: 0 20px;
+    }
+} 

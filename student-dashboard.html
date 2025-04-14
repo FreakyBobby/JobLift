@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Joblyft</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Joblyft</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="job-search.html">Search Jobs</a>
+            <a href="student-dashboard.html" class="active">My Applications</a>
+        </div>
+    </nav>
+
+    <main class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>My Applications</h1>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Total Applications</h3>
+                    <p id="totalApplications">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending</h3>
+                    <p id="pendingApplications">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Accepted</h3>
+                    <p id="acceptedApplications">0</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-content">
+            <div class="filters">
+                <select id="statusFilter">
+                    <option value="all">All Status</option>
+                    <option value="pending">Pending</option>
+                    <option value="accepted">Accepted</option>
+                    <option value="rejected">Rejected</option>
+                </select>
+                <input type="text" id="searchInput" placeholder="Search applications...">
+            </div>
+
+            <div class="applications-table-container">
+                <table class="jobs-table">
+                    <thead>
+                        <tr>
+                            <th>Job Title</th>
+                            <th>Company</th>
+                            <th>Applied Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="applicationsTableBody">
+                        <!-- Applications will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Application Details Modal -->
+    <div id="applicationDetailsModal" class="modal">
+        <div class="modal-content">
+            <h2>Application Details</h2>
+            <div id="applicationDetailsContent"></div>
+            <div class="modal-actions">
+                <button id="closeModal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="student-dashboard.js"></script>
+</body>
+</html> 
